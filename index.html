@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduUniverse - Learn Without Limits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6fb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #3f51b5, #673ab7);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+    }
+
+    nav {
+      background: #2c2f5d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 20px;
+      background: white;
+    }
+
+    .hero-text {
+      flex: 1 1 500px;
+      padding: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5em;
+      color: #3f51b5;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .hero-image {
+      flex: 1 1 400px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .features {
+      background: #eef0f8;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2.2em;
+      color: #673ab7;
+      margin-bottom: 40px;
+    }
+
+    .feature-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .feature-box {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      width: 280px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-box h3 {
+      color: #3f51b5;
+      margin-bottom: 10px;
+    }
+
+    .video-section {
+      background: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      font-size: 2em;
+      color: #3f51b5;
+      margin-bottom: 30px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .about {
+      background: #fdfdfd;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2em;
+      color: #3f51b5;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #444;
+      font-size: 1.1em;
+    }
+
+    .signup {
+      background: #eef0f8;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .signup h2 {
+      font-size: 2em;
+      color: #673ab7;
+      margin-bottom: 20px;
+    }
+
+    .signup form {
+      background: white;
+      padding: 30px;
+      max-width: 500px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .signup input[type="text"],
+    .signup input[type="email"],
+    .signup input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .signup button {
+      background: #3f51b5;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .signup button:hover {
+      background: #5c6bc0;
+    }
+
+    footer {
+      background: #3f51b5;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .feature-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EduUniverse</h1>
+    <p>Expanding Minds. Exploring the Universe of Knowledge.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Library</a>
+    <a href="#">About</a>
+    <a href="#signup">Sign Up</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to EduUniverse</h2>
+      <p>At EduUniverse, we believe education is the passport to the future. We offer dynamic resources, powerful tools, and global access to learners of all ages. Start your journey of lifelong learning today.</p>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1000&q=80" alt="Student Studying in Library" />
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Why Choose EduUniverse?</h2>
+    <div class="feature-boxes">
+      <div class="feature-box">
+        <h3>📚 Extensive Library</h3>
+        <p>Thousands of books, videos, and materials for every subject and skill level.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🌐 Global Access</h3>
+        <p>Join a diverse learning community from around the world, anytime and anywhere.</p>
+      </div>
+      <div class="feature-box">
+        <h3>👨‍🏫 Top Educators</h3>
+        <p>Learn from experts and university instructors with real-world experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>🎥 Watch Our Vision</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/Mbl8sHzNm4E" title="EduUniverse Vision Video" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About EduUniverse</h2>
+    <p>
+      EduUniverse is more than just an online education platform—it's a movement to empower students to reach their highest potential. 
+      With a mission to provide high-quality learning experiences, EduUniverse connects learners with trusted educators, a digital library, and interactive tools to thrive in a fast-changing world.
+    </p>
+  </section>
+
+  <section class="signup" id="signup">
+    <h2>Join EduUniverse Now</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Create Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EduUniverse. All Rights Reserved. | Designed for dreamers & learners.</p>
+  </footer>
+
+</body>
+</html>
